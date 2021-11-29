@@ -9,3 +9,27 @@ button {
 }
 
 
+body.night{
+    background-color: black;
+}
+
+h1.night{
+    color: white;
+}
+
+p.night{
+    color: white;
+}
+
+
+body.day{
+    background-color: white;
+}
+
+h1.day{
+    color: black;
+}
+
+p.day{
+    color: black;
+}
