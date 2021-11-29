@@ -19,7 +19,7 @@ function toggleAppStatus() {
     updateView();
 }
 
-/********  Änderung in View-Schicht **********/
+/********  View-Schicht **********/
 
 // Modul: Update der View-Schicht | Test:
 // .. View folgt status
