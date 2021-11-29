@@ -9,27 +9,20 @@ button {
 }
 
 
+/** Night-Mode */
 body.night{
     background-color: black;
 }
 
-h1.night{
+h1.night, p.night{
     color: white;
 }
 
-p.night{
-    color: white;
-}
-
-
+/** Day-Mode */
 body.day{
     background-color: white;
 }
 
-h1.day{
-    color: black;
-}
-
-p.day{
+h1.day,p.day{
     color: black;
 }
