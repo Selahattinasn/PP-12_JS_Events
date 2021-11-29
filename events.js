@@ -2,24 +2,36 @@
 /********  Variablen **********/
 
 const btn = document.getElementById("trigBtn");
-
+let appStatus = true;
 
 /********  Event-Listener **********/
-btn.addEventListener("click",onClick);
 
+// Webseite geladen --> auf (Anfangs)-Zustand umschalten
+window.addEventListener("load",toggleAppStatus);
 
-function onClick() {
-   output("clicked");
-}
-
-
-
+// Klick auf Btn  --> Zustand umschalten
+btn.addEventListener("click",toggleAppStatus);
 
 /********  Business-Logic | Toggle **********/
 
-
+function toggleAppStatus() {
+    appStatus = !appStatus;
+    updateView();
+}
 
 /********  Änderung in View-Schicht **********/
+
+// Modul: Update der View-Schicht | Test:
+// .. View folgt status
+function updateView(){
+    if (appStatus) {
+        switchClassName("night");
+        switchBtnTxt("day");
+    } else {
+        switchClassName("day");
+        switchBtnTxt("night");
+    }
+}
 
 // Modul: Umschaltung Klassenamen | Test:
 // switchClassName("night");
