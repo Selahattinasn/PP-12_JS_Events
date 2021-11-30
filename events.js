@@ -16,6 +16,7 @@ btn.addEventListener("click",toggleAppStatus);
 
 function toggleAppStatus() {
     appStatus = !appStatus;
+    // output(appStatus);
     updateView();
 }
 
@@ -37,9 +38,17 @@ function updateView(){
 // switchClassName("night");
 // switchClassName("day");
 function switchClassName(modeStr) {
+
+    // Varianten zur Adressierung
+    // output(document.getElementsByTagName("h1"));
+    // output(document.getElementsByTagName("p"));
+    // output(document.getElementsByClassName("day"));
+    
+    // Kritik: wenig robust, da starre Indexierung
     document.body.className = modeStr;
     document.body.children[0].className = modeStr;
     document.body.children[1].className = modeStr;
+
 }
 
 // Modul: Umschaltung BtnTxt | Test:
